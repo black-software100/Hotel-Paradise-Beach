@@ -1,0 +1,7 @@
+{
+  "name": "FrontHotel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

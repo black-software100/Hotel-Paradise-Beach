@@ -1,0 +1,12 @@
+<ion-content>
+  <ion-infinite-scroll>
+    <ion-card *ngFor="let reserva of Reservas">
+      <ion-card-content>
+        <h1 class="text-center">{{reserva.nombre}} <span>{{reserva.appellido}}</span></h1>
+        <h2 class="text-center">Telefono: <span>{{reserva.telefono}}</span></h2>
+        <h2 class="text-center">precio Total:<span>{{reserva.costoReserva}}</span></h2>
+        <h2 class="text-center">Numero de personas:<span>{{reserva.numeroPersona}}</span></h2>
+      </ion-card-content>
+    </ion-card>
+  </ion-infinite-scroll>
+</ion-content>

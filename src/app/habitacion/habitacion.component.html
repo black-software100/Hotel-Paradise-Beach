@@ -1,0 +1,16 @@
+<ion-content>
+  <ion-infinite-scroll>
+    <a href="resevar/{{habitacion._id}}" *ngFor="let habitacion of Habitaciones">
+      <ion-card>
+        <ion-card-header><h1 class="text-center">{{habitacion.nombre}}</h1></ion-card-header>
+        <ion-card-content class="text-center" >
+          <img src={{habitacion.foto[0]}} alt="">
+          <br>
+          <h2 >{{habitacion.descripcion}}</h2>
+          <h2 >Cantidad de personas; <span>{{habitacion.cantidadMaximo}}</span></h2>
+          <h2 >Precio Noche: <span>{{habitacion.precioNoche}}</span></h2>
+        </ion-card-content>
+      </ion-card>
+    </a>
+  </ion-infinite-scroll>
+</ion-content>
