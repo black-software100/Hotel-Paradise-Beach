@@ -7,7 +7,9 @@ import { HotelService } from '../Services/hotel.service';
 })
 export class HabitacionComponent  implements OnInit {
   Habitaciones:any
-  constructor(private _hotel:HotelService) { }
+  constructor(private _hotel:HotelService) { 
+
+  }
   
   
   ngOnInit() {
