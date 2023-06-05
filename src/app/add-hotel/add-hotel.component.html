@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-infinite-scroll>
+    <ion-card>
+      <ion-card-header>
+        <h1 class="text-center">Formulario de reservas</h1>
+      </ion-card-header>
+      <ion-card-content>
+          <form [formGroup]="formReserva">
+            <ion-input formControlName="nombre" label="Nombre" placeholder="Nombre"></ion-input>
+            <ion-input formControlName="foto" label="Foto" placeholder="foto"></ion-input>
+            <ion-input formControlName="descripcion" label="descripcion" placeholder="descripcion" type="text"></ion-input>
+            <ion-input formControlName="precioNoche" label="Precio Noche" placeholder="Precio noche" type="number"></ion-input>
+            <ion-input formControlName="cantidadMaximo" label="Cantidad Maxima Persona" placeholder="Cantidad maxima" type="number"></ion-input>
+          </form>
+          <br>
+          <ion-button expand="block" (click)="guardar()">Guardar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-infinite-scroll>
+</ion-content>

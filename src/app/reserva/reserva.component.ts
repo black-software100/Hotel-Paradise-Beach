@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormsModule } from '@angular/forms';
 import { ReservasService } from '../Services/reservas.service';
 import { Router,ActivatedRoute } from '@angular/router';
+import { AddHotelComponent } from '../add-hotel/add-hotel.component';
 @Component({
   selector: 'app-reserva',
   templateUrl: './reserva.component.html',
@@ -11,7 +12,7 @@ import { Router,ActivatedRoute } from '@angular/router';
 export class ReservaComponent  implements OnInit {
   public formReserva:FormGroup;
   id:any
-  constructor(private _form:FormBuilder, private _reserva:ReservasService, private _id:ActivatedRoute) { 
+  constructor(private _form:FormBuilder, private _reserva:ReservasService, private _id:ActivatedRoute, private deolverse:Router) { 
     this.id = this._id.snapshot.paramMap.get('id');
     
     this.formReserva = _form.group({
@@ -32,8 +33,8 @@ export class ReservaComponent  implements OnInit {
       apellido: this.formReserva.value.apellido,
       fechaInicio: this.formReserva.value.fechaInicio,
       fechaFinal: this.formReserva.value.fechaFinal,
-      numeroPersona: this.formReserva.value.numeroPersona,
-      telefono: this.formReserva.value.telefono
+      numeroPersona: parseInt(this.formReserva.value.numeroPersona) ,
+      telefono: parseInt(this.formReserva.value.telefono) 
     }
     this._reserva.add(modelo).subscribe({
       next:(data)=>{
@@ -42,5 +43,10 @@ export class ReservaComponent  implements OnInit {
         console.log(err)
       }
     })
+    console.log(modelo)
+  }
+  
+  atras(){
+  this.deolverse.navigate(['home/habitacion'])
   }
 }

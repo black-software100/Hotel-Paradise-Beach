@@ -5,17 +5,19 @@
         <h1 class="text-center">Formulario de reservas</h1>
       </ion-card-header>
       <ion-card-content>
-          <form>
-            <ion-input label="Nombre" placeholder="Nombre"></ion-input>
-            <ion-input label="Apellido" placeholder="Apellido"></ion-input>
-            <ion-input label="telefono" placeholder="Telefono" type="number"></ion-input>
-            <ion-input label="Fecha Ingreso" placeholder="Fecha Ingreso" type="date"></ion-input>
-            <ion-input label="Fecha Final" placeholder="Fecha salida" type="date"></ion-input>
-            <ion-input label="Numero de persona" type="number"></ion-input>
+          <form [formGroup]="formReserva">
+            <ion-input formControlName="nombre" label="Nombre" placeholder="Nombre"></ion-input>
+            <ion-input formControlName="apellido"  label="Apellido" placeholder="Apellido"></ion-input>
+            <ion-input formControlName="telefono"  label="telefono" placeholder="Telefono" type="number"></ion-input>
+            <ion-input formControlName="fechaInicio"  label="Fecha Ingreso" placeholder="Fecha Ingreso" type="date"></ion-input>
+            <ion-input formControlName="fechaFinal"  label="Fecha Final" placeholder="Fecha salida" type="date"></ion-input>
+            <ion-input formControlName="numeroPersona"  label="Numero de persona" type="number"></ion-input>
           </form>
           <br>
-          <ion-button expand="block">Guardar</ion-button>
+          <ion-button expand="block" (click)="guardar()">Guardar</ion-button>
       </ion-card-content>
     </ion-card>
+    <ion-button expand="block" color="danger" (click)="atras()"> No reservar</ion-button>
   </ion-infinite-scroll>
 </ion-content>
+

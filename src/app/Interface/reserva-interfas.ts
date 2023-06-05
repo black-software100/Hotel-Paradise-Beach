@@ -2,8 +2,8 @@ export interface ReservaInterfas {
     idHabitacion:string,
     nombre:string,
     apellido:string,
-    telefono:string,
+    telefono:number,
     fechaInicio:string,
     fechaFinal:string,
-    numeroPersona:string
+    numeroPersona:number
 }

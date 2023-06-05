@@ -12,6 +12,7 @@ import { ListComponent } from './list/list.component';
 import { HabitacionComponent } from './habitacion/habitacion.component';
 import { ReservaComponent } from './reserva/reserva.component';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
+import {AddHotelComponent} from './add-hotel/add-hotel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
     InicioComponent,
     ListComponent,
     HabitacionComponent,
-    ReservaComponent
+    ReservaComponent,
+    AddHotelComponent
   ],
   imports: [
     BrowserModule,
