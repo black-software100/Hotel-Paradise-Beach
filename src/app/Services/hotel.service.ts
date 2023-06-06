@@ -6,7 +6,7 @@ import { HotelInterface } from '../Interface/hotel-interface';
   providedIn: 'root'
 })
 export class HotelService {
-  url: string = 'https://test-api-lovat-alpha.vercel.app/';
+  url: string = 'https://test-api-lovat-alpha.vercel.app';
   constructor(private hotel:HttpClient) { }
 
   lista(): Observable<any>{
