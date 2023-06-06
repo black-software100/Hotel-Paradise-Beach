@@ -6,7 +6,7 @@ import { ReservaInterfas } from '../Interface/reserva-interfas';
   providedIn: 'root'
 })
 export class ReservasService {
-  url: string = 'http://localhost:8080';
+  url: string = 'https://test-api-lovat-alpha.vercel.app/';
   constructor(private reservas:HttpClient) { }
 
   lista(): Observable<any>{
