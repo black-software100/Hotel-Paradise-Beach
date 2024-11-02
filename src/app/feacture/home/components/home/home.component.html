@@ -1,0 +1,58 @@
+<app-banner></app-banner>
+<section class="container-fluid my-5" id="home">
+  <div class="row">
+    <!--<img src="../../assets/img/00078F.png" alt="logo" class="img-fluid" style="width: 200px; height: 150px;">-->
+    <div class="col-12 col-md-4 p-5 text-center align-self-center">
+      <h2>Calificaciones</h2>
+      <p class="text-start mt-4">Servicio de Hotel</p>
+      <div class="progress" role="progressbar">
+        <div class="progress-bar" style="width: 60%">60%</div>
+      </div>
+      <p class="text-start mt-4">Instalaciones Hoteleras</p>
+      <div class="progress" role="progressbar">
+        <div class="progress-bar" style="width: 80%">80%</div>
+      </div>
+      <p class="text-start mt-4">Trato a los empleados</p>
+      <div class="progress" role="progressbar">
+        <div class="progress-bar" style="width: 85%">85%</div>
+      </div>
+      <p class="text-start mt-4">Alimentos y bebidas</p>
+      <div class="progress" role="progressbar">
+        <div class="progress-bar" style="width: 100%">100%</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="row">
+        <h2 class="my-2 subtitle">Hotel Paradise Beach</h2>
+        <h4 class="my-3">
+          El Hotel Paradise Beach se encuentra estratégicamente situado frente a
+          una playa de arenas blancas y aguas cristalinas, brindándote vistas
+          panorámicas del océano Pacífico y la puesta de sol más pintoresca que
+          jamás hayas imaginado. Cada amanecer te recibirá con una sensación de
+          paz y serenidad, mientras que las suaves brisas tropicales te
+          acariciarán durante todo el día
+        </h4>
+      </div>
+      <div class="row">
+        @for (habitacion of habitaciones; track $index) {
+        <div class="col-12 col-md-6">
+          <img
+            src="{{ habitacion.src }}"
+            class="img-fluid w-100 h-100 shadow zoom"
+          />
+        </div>
+        }
+      </div>
+      <div class="row mt-3">
+        @for (habitacion of habitaciones1; track $index) {
+        <div class="col-12 col-md-6">
+          <img
+            src="{{ habitacion.src }}"
+            class="img-fluid w-100 h-100 shadow zoom"
+          />
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

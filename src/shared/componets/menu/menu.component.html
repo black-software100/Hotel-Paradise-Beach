@@ -1,0 +1,62 @@
+<div class="flex flex-col h-full">
+  <div class="flex shrink-0 grow basis-auto">
+    <nz-sider
+      nzCollapsible
+      nzWidth="240px"
+      nzBreakpoint="xs"
+      [(nzCollapsed)]="isCollapsed"
+      [nzTrigger]="null"
+      nzTheme="dark"
+    >
+      <button
+        nz-button
+        nzType="primary"
+        (click)="toggleCollapsed()"
+        class="w-full"
+      >
+        <span
+          nz-icon
+          [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+        ></span>
+      </button>
+      <ul
+        nz-menu
+        nzMode="inline"
+        nzTheme="dark"
+        class=""
+        [nzInlineCollapsed]="isCollapsed"
+      >
+        <li nz-submenu nzTitle="Inicio" nzIcon="home" class="text-white"></li>
+        <li
+          nz-submenu
+          nzTitle="Administración"
+          nzIcon="shopping"
+          class="text-white"
+        >
+          <ul>
+            <li nz-menu-item class="">
+              <a routerLink="sale" class="text-white"> Ventas </a>
+            </li>
+          </ul>
+        </li>
+        <li
+          nz-submenu
+          nzTitle="Inventario"
+          nzIcon="unordered-list"
+          class="text-white"
+        >
+          <ul>
+            <li nz-menu-item>
+              <a routerLink="inventory" class="text-white">Agregar productos</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <div class="shrink-0 grow basis-auto">
+      <ng-container>
+        <!-- <router-outlet></router-outlet> -->
+      </ng-container>
+    </div>
+  </div>
+</div>
